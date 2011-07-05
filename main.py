@@ -57,14 +57,6 @@ class RedirecHandler(webapp.RequestHandler):
 		if not url:
 			self.response.out.write('not found')
 		else:
-			self.response.out.write('<html>'
-									'<head>'
-									'<title></title>'
-									'<meta http-equiv="REFRESH" content="0;url=www.google.com"></head>'
-									'<body>'
-									'</body>'
-									'</html>')
-
 			self.redirect(url.original)
 
 def main():
